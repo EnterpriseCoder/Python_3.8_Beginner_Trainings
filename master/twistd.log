@@ -1,0 +1,420 @@
+2020-07-23 22:05:43+0300 [-] Loading buildbot.tac...
+2020-07-23 22:05:49+0300 [-] Loaded.
+2020-07-23 22:05:49+0300 [-] twistd 20.3.0 (c:\users\frankhiggins\desktop\python\wagtail\scripts\python.exe 3.7.5) starting up.
+2020-07-23 22:05:49+0300 [-] reactor class: twisted.internet.selectreactor.SelectReactor.
+2020-07-23 22:05:49+0300 [-] Starting BuildMaster -- buildbot.version: 2.8.2
+2020-07-23 22:05:49+0300 [-] Loading configuration from 'C:\\Users\\FrankHiggins\\Desktop\\python\\master\\master.cfg'
+2020-07-23 22:05:49+0300 [-] c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\config.py:90: buildbot.config.ConfigWarning: [0.9.0 and later] `buildbotNetUsageData` is not configured and defaults to basic.
+	This parameter helps the buildbot development team to understand the installation base.
+	No personal information is collected.
+	Only installation software version info and plugin usage is sent.
+	You can `opt-out` by setting this variable to None.
+	Or `opt-in` for more information by setting it to "full".
+	
+2020-07-23 22:05:49+0300 [-] Setting up database with URL 'sqlite:/state.sqlite'
+2020-07-23 22:05:49+0300 [-] setting database journal mode to 'wal'
+2020-07-23 22:05:49+0300 [-] adding 1 new change_sources, removing 0
+2020-07-23 22:05:49+0300 [-] gitpoller: using workdir 'C:\Users\FrankHiggins\Desktop\python\master\gitpoller-workdir'
+2020-07-23 22:05:49+0300 [-] adding 1 new builders, removing 0
+2020-07-23 22:05:49+0300 [-] adding 2 new schedulers, removing 0
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'waterfall_view'
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'console_view'
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'grid_view'
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'waterfall_view'
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'console_view'
+2020-07-23 22:05:50+0300 [-] initializing www plugin 'grid_view'
+2020-07-23 22:05:50+0300 [-] BuildbotSite starting on 8010
+2020-07-23 22:05:50+0300 [-] Starting factory <buildbot.www.service.BuildbotSite object at 0x05B568B0>
+2020-07-23 22:05:50+0300 [-] adding 1 new workers, removing 0
+2020-07-23 22:05:50+0300 [-] PBServerFactory starting on 9989
+2020-07-23 22:05:50+0300 [-] Starting factory <twisted.spread.pb.PBServerFactory object at 0x05B56DD0>
+2020-07-23 22:05:51+0300 [-] BuildMaster is running
+2020-07-23 22:05:51+0300 [-] buildbotNetUsageData: sending {'installid': '410f3dcad742cc510c35f4bf28dc596714ee5fc6', 'versions': {'Python': '3.7.5', 'Buildbot': '2.8.2', 'Twisted': '20.3.0'}, 'platform': {'platform': 'Windows-10-10.0.18362-SP0', 'system': 'Windows', 'machine': 'AMD64', 'processor': 'AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD', 'python_implementation': 'CPython', 'version': '10.0.18362', 'distro': '10:10.0.18362'}, 'plugins': {'buildbot/worker/base/Worker': 1, 'buildbot/config/BuilderConfig': 1, 'buildbot/schedulers/basic/SingleBranchScheduler': 1, 'buildbot/schedulers/forcesched/ForceScheduler': 1, 'buildbot/changes/gitpoller/GitPoller': 1, 'buildbot/steps/source/git/Git': 1, 'buildbot/steps/shell/ShellCommand': 1}, 'db': 'sqlite', 'mq': 'simple', 'www_plugins': ['waterfall_view', 'console_view', 'grid_view']}
+2020-07-23 22:05:52+0300 [-] buildbotNetUsageData: buildbot.net said: ok
+2020-07-23 22:07:57+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51125)
+2020-07-23 22:07:58+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51126)
+2020-07-23 22:07:58+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51127)
+2020-07-23 22:07:58+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51114)
+2020-07-23 22:07:59+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51124)
+2020-07-23 22:07:59+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51122)
+2020-07-23 22:10:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:13:07+0300 [Broker,0,127.0.0.1] worker 'example-worker' attaching from IPv4Address(type='TCP', host='127.0.0.1', port=51312)
+2020-07-23 22:13:07+0300 [Broker,0,127.0.0.1] Got workerinfo from 'example-worker'
+2020-07-23 22:13:07+0300 [-] bot attached
+2020-07-23 22:13:07+0300 [Broker,0,127.0.0.1] Worker example-worker attached to runtests
+2020-07-23 22:15:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:16:14+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51365)
+2020-07-23 22:16:14+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51366)
+2020-07-23 22:16:44+0300 [-] Traceback (most recent call last):
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+2020-07-23 22:16:44+0300 [-]     result = g.send(result)
+2020-07-23 22:16:44+0300 [-] StopIteration: [{'id': 1, 'name': 'runtests', 'masterids': [1], 'description': None, 'tags': []}]
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] During handling of the above exception, another exception occurred:
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] Traceback (most recent call last):
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+2020-07-23 22:16:44+0300 [-]     result = g.send(result)
+2020-07-23 22:16:44+0300 [-] StopIteration: {'builderid': 1, 'name': 'runtests', 'masterids': [1], 'description': None, 'tags': []}
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] During handling of the above exception, another exception occurred:
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] Traceback (most recent call last):
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+2020-07-23 22:16:44+0300 [-]     result = g.send(result)
+2020-07-23 22:16:44+0300 [-] StopIteration: {'builderid': 1, 'name': 'runtests', 'masterids': [1], 'description': None, 'tags': []}
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] During handling of the above exception, another exception occurred:
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] Traceback (most recent call last):
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+2020-07-23 22:16:44+0300 [-]     result = g.send(result)
+2020-07-23 22:16:44+0300 [-] StopIteration: ['runtests']
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] During handling of the above exception, another exception occurred:
+2020-07-23 22:16:44+0300 [-] 
+2020-07-23 22:16:44+0300 [-] Traceback (most recent call last):
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\schedulers\forcesched.py", line 167, in getFromKwargs
+2020-07-23 22:16:44+0300 [-]     arg = self.parse_from_args(args)
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\schedulers\forcesched.py", line 187, in parse_from_args
+2020-07-23 22:16:44+0300 [-]     return self.parse_from_arg(l[0])
+2020-07-23 22:16:44+0300 [-]   File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\schedulers\forcesched.py", line 271, in parse_from_arg
+2020-07-23 22:16:44+0300 [-]     "form 'User <email@email.com>'").format(self.name))
+2020-07-23 22:16:44+0300 [-] buildbot.schedulers.forcesched.ValidationError: username: please fill in email address in the form 'User <email@email.com>'
+2020-07-23 22:16:50+0300 [-] added buildset 1 to database
+2020-07-23 22:16:50+0300 [-] starting build <Build runtests number:None results:success> using worker <WorkerForBuilder builder='runtests' worker='example-worker' state=AVAILABLE>
+2020-07-23 22:16:50+0300 [-] <Build runtests number:None results:success>.startBuild
+2020-07-23 22:16:50+0300 [-] acquireLocks(worker <Worker 'example-worker'>, locks [])
+2020-07-23 22:16:50+0300 [-] starting build <Build runtests number:1 results:success>.. pinging the worker <WorkerForBuilder builder='runtests' worker='example-worker' state=BUILDING>
+2020-07-23 22:16:50+0300 [-] sending ping
+2020-07-23 22:16:50+0300 [Broker,0,127.0.0.1] ping finished: success
+2020-07-23 22:16:51+0300 [-] <RemoteShellCommand '['git', '--version']'>: RemoteCommand.run [0]
+2020-07-23 22:16:51+0300 [-] command '['git', '--version']' in dir 'build'
+2020-07-23 22:16:51+0300 [Broker,0,127.0.0.1] <RemoteShellCommand '['git', '--version']'> rc=0
+2020-07-23 22:16:51+0300 [-] <RemoteCommand 'stat' at 11753840>: RemoteCommand.run [1]
+2020-07-23 22:16:51+0300 [Broker,0,127.0.0.1] <RemoteCommand 'stat' at 11753840> rc=2
+2020-07-23 22:16:51+0300 [-] <RemoteCommand 'listdir' at 12350032>: RemoteCommand.run [2]
+2020-07-23 22:16:51+0300 [Broker,0,127.0.0.1] <RemoteCommand 'listdir' at 12350032> rc=0
+2020-07-23 22:16:51+0300 [-] No git repo present, making full clone
+2020-07-23 22:16:51+0300 [-] <RemoteShellCommand '['git', 'clone', 'git://github.com/buildbot/hello-world.git', '.', '--progress']'>: RemoteCommand.run [3]
+2020-07-23 22:16:51+0300 [-] command '['git', 'clone', 'git://github.com/buildbot/hello-world.git', '.', '--progress']' in dir 'build'
+2020-07-23 22:16:52+0300 [Broker,0,127.0.0.1] <RemoteShellCommand '['git', 'clone', 'git://github.com/buildbot/hello-world.git', '.', '--progress']'> rc=0
+2020-07-23 22:16:52+0300 [-] <RemoteShellCommand '['git', 'rev-parse', 'HEAD']'>: RemoteCommand.run [4]
+2020-07-23 22:16:52+0300 [-] command '['git', 'rev-parse', 'HEAD']' in dir 'build'
+2020-07-23 22:16:52+0300 [Broker,0,127.0.0.1] <RemoteShellCommand '['git', 'rev-parse', 'HEAD']'> rc=0
+2020-07-23 22:16:52+0300 [-] Got Git revision 7f8e719e30f3f6b98558541d21dc8b589a4131be
+2020-07-23 22:16:52+0300 [-] Closing log, sending result of the command None 
+2020-07-23 22:16:53+0300 [-] releaseLocks(Git(repourl='git://github.com/buildbot/hello-world.git', mode='incremental')): []
+2020-07-23 22:16:53+0300 [-]  step 'git' complete: success (None)
+2020-07-23 22:16:53+0300 [-] ShellCommand.startCommand(cmd=<RemoteShellCommand '['trial', 'hello']'>)
+2020-07-23 22:16:53+0300 [-]   cmd.args = {'workdir': 'build', 'env': {'PYTHONPATH': '.'}, 'want_stdout': 1, 'want_stderr': 1, 'logfiles': {}, 'timeout': 1200, 'maxTime': None, 'sigtermTime': None, 'usePTY': None, 'logEnviron': True, 'initial_stdin': None}
+2020-07-23 22:16:53+0300 [-] <RemoteShellCommand '['trial', 'hello']'>: RemoteCommand.run [5]
+2020-07-23 22:16:53+0300 [-] command '['trial', 'hello']' in dir 'build'
+2020-07-23 22:16:54+0300 [Broker,0,127.0.0.1] <RemoteShellCommand '['trial', 'hello']'> rc=0
+2020-07-23 22:16:54+0300 [-] closing log <buildbot.process.buildstep.SyncLogFileWrapper object at 0x05886D50>
+2020-07-23 22:16:54+0300 [-] releaseLocks(ShellCommand(command=['trial', 'hello'], env={'PYTHONPATH': '.'})): []
+2020-07-23 22:16:54+0300 [-]  step 'shell' complete: success (None)
+2020-07-23 22:16:54+0300 [-]  <Build runtests number:1 results:success>: build finished
+2020-07-23 22:16:54+0300 [-] releaseLocks(<Worker 'example-worker'>): []
+2020-07-23 22:17:41+0300 [_GenericHTTPChannelProtocol,15,127.0.0.1] Warning: limited data api query is not backed by db because of following filters [] ['-changeid']
+2020-07-23 22:17:42+0300 [_GenericHTTPChannelProtocol,7,127.0.0.1] Warning: limited data api query is not backed by db because of following filters [] ['-changeid']
+2020-07-23 22:17:51+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51410)
+2020-07-23 22:17:54+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51363)
+2020-07-23 22:18:42+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51357)
+2020-07-23 22:18:42+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51409)
+2020-07-23 22:18:42+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51362)
+2020-07-23 22:19:37+0300 [-] Timing out client: IPv4Address(type='TCP', host='127.0.0.1', port=51364)
+2020-07-23 22:20:10+0300 [Broker,0,127.0.0.1] Worker.detached(example-worker)
+2020-07-23 22:20:10+0300 [Broker,0,127.0.0.1] releaseLocks(<Worker 'example-worker'>): []
+2020-07-23 22:20:10+0300 [-] Worker example-worker detached from runtests
+2020-07-23 22:20:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:25:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:25:51+0300 [Broker,1,127.0.0.1] worker 'example-worker' attaching from IPv4Address(type='TCP', host='127.0.0.1', port=51594)
+2020-07-23 22:25:51+0300 [Broker,1,127.0.0.1] Got workerinfo from 'example-worker'
+2020-07-23 22:25:51+0300 [-] bot attached
+2020-07-23 22:25:51+0300 [Broker,1,127.0.0.1] Worker example-worker attached to runtests
+2020-07-23 22:30:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:35:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:38:33+0300 [Broker,1,127.0.0.1] Worker.detached(example-worker)
+2020-07-23 22:38:33+0300 [Broker,1,127.0.0.1] releaseLocks(<Worker 'example-worker'>): []
+2020-07-23 22:38:33+0300 [-] Worker example-worker detached from runtests
+2020-07-23 22:40:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:45:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:50:49+0300 [-] while polling for changes
+	Traceback (most recent call last):
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 182, in poll
+	    yield self._checkGitFeatures()
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 111, in _checkGitFeatures
+	    stdout = yield self._dovccmd('--version', [])
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 405, in _dovccmd
+	    stdout = yield self._dovccmdImpl(command, args, path, None)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\buildbot\changes\gitpoller.py", line 429, in _dovccmdImpl
+	    full_args, path=path, env=full_env)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 192, in getProcessOutputAndValue
+	    protoArgs=(stdinBytes,),
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\utils.py", line 29, in _callProtocolWithDeferred
+	    reactor.spawnProcess(p, executable, (executable,)+tuple(args), env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\posixbase.py", line 353, in spawnProcess
+	    return Process(self, processProtocol, executable, args, env, path)
+	  File "c:\users\frankhiggins\desktop\python\wagtail\lib\site-packages\twisted\internet\_dumbwin32proc.py", line 232, in __init__
+	    raise OSError(pwte)
+	builtins.OSError: (2, 'CreateProcess', 'The system cannot find the file specified.')
+	
+2020-07-23 22:54:17+0300 [Broker,2,127.0.0.1] worker 'example-worker' attaching from IPv4Address(type='TCP', host='127.0.0.1', port=52115)
+2020-07-23 22:54:17+0300 [Broker,2,127.0.0.1] Got workerinfo from 'example-worker'
+2020-07-23 22:54:17+0300 [-] bot attached
+2020-07-23 22:54:17+0300 [Broker,2,127.0.0.1] Worker example-worker attached to runtests
+2020-07-23 22:55:09+0300 [Broker,2,127.0.0.1] Worker.detached(example-worker)
+2020-07-23 22:55:09+0300 [Broker,2,127.0.0.1] releaseLocks(<Worker 'example-worker'>): []
+2020-07-23 22:55:09+0300 [-] Worker example-worker detached from runtests
